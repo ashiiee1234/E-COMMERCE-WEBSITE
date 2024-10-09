@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | E-COMMERCE WEBSITE</title>
+    <link rel="stylesheet" href="login.css"> <!-- Use login.css for consistent styling -->
+    <link rel="icon" href="https://yt3.ggpht.com/a/AGF-l78km1YyNXmF0r3-0CycCA0HLA_i6zYn_8NZEg=s900-c-k-c0xffffffff-no-rj-mo" type="image/gif" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <div id="headerContainer"></div>
+    <script>
+        load("header.html"); // Load the same header used in the main website
+        function load(url) {
+            const req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById('headerContainer').innerHTML = req.responseText;
+        }
+    </script>
+
+    <main>
+        <h1>Sign Up</h1>
+        <form id="signupForm">
+            <label for="newUsername">Username:</label>
+            <input type="text" id="newUsername" name="newUsername" required>
+            <label for="newPassword">Password:</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login here</a></p> <!-- Login link -->
+    </main>
+
+    <!-- FOOTER -->
+    <!-- <div id="footerContainer"></div>
+    <script>
+        load("footer.html"); // Load footer
+    </script> -->
+     <!-- FOOTER -->
+     <div id="footerContainer"></div>
+     <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+     <script>
+         load("footer.html"); // Load the footer as before
+         function load(url) {
+             const req = new XMLHttpRequest();
+             req.open("GET", url, false);
+             req.send(null);
+             document.getElementById('footerContainer').innerHTML = req.responseText;
+         }
+     </script>
+     <script src="login.js"></script>
+</body>
+</html>

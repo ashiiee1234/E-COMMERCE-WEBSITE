@@ -1,0 +1,62 @@
+                                                                                                                                                                                                                                              <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | E-COMMERCE WEBSITE</title>
+    <link rel="stylesheet" href="login.css">
+    <!-- favicon -->
+    <link rel="icon" href="https://yt3.ggpht.com/a/AGF-l78km1YyNXmF0r3-0CycCA0HLA_i6zYn_8NZEg=s900-c-k-c0xffffffff-no-rj-mo" type="image/gif" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <div id="headerContainer"></div>
+    <script>
+        load("header.html"); // Load the same header used in the main website
+        function load(url) {
+            const req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById('headerContainer').innerHTML = req.responseText;
+        }
+    </script>
+
+    <!-- <main>
+        <h1>Login</h1>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </main> -->
+    <main>
+        <h1>Login</h1>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="signup.html">Sign up here</a></p> <!-- Signup link -->
+    </main>
+    
+
+    <!-- FOOTER -->
+    <div id="footerContainer"></div>
+    <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
+    <script>
+        load("footer.html"); // Load the footer as before
+        function load(url) {
+            const req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById('footerContainer').innerHTML = req.responseText;
+        }
+    </script>
+    <script src="login.js"></script>
+</body>
+</html>
